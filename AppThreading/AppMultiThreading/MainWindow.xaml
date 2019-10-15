@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AppMultiThreading"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="354">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <Label x:Name="Lbl_Result" Content="Risultato : " HorizontalAlignment="Left" Margin="75,78,0,0" VerticalAlignment="Top" FontSize="20"/>
+            <Button x:Name="Btn_Task" Content="Task" HorizontalAlignment="Left" Margin="75,265,0,0" VerticalAlignment="Top" Width="205" Height="55" FontSize="20" BorderBrush="#FF646464" Click="Btn_Task_Click">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FF05F3DD" Offset="0"/>
+                        <GradientStop Color="#FFE25151" Offset="1"/>
+                        <GradientStop Color="#FFC7F0EC" Offset="0.483"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+        </Grid>
     </Grid>
 </Window>
