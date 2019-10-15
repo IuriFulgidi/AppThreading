@@ -5,23 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AppMultiThreading"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="354">
+        Title="MainWindow" Height="450" Width="719">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
         <Grid>
-            <Label x:Name="Lbl_Result" Content="" HorizontalAlignment="Left" Margin="75,255,0,0" VerticalAlignment="Top" FontSize="20"/>
-            <Button x:Name="Btn_Task" Content="Task" HorizontalAlignment="Left" Margin="75,120,0,0" VerticalAlignment="Top" Width="205" Height="55" FontSize="20" BorderBrush="#FF646464" Click="Btn_Task_Click">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF174CFF" Offset="1"/>
+                    <GradientStop Color="#FFFF0606"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Label x:Name="Lbl_Result" Content="" HorizontalAlignment="Left" Margin="65,253,0,0" VerticalAlignment="Top" FontSize="20"/>
+            <Button x:Name="Btn_Task" Content="Calcola" HorizontalAlignment="Left" Margin="65,145,0,0" VerticalAlignment="Top" Width="205" Height="55" FontSize="20" BorderBrush="#FF646464" Click="Btn_Task_Click">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                         <GradientStop Color="#FF05F3DD" Offset="0"/>
-                        <GradientStop Color="#FFE25151" Offset="1"/>
+                        <GradientStop Color="#FFFF786A" Offset="1"/>
                         <GradientStop Color="#FFC7F0EC" Offset="0.483"/>
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
+            <Button x:Name="Btn_Conta" Content="Conta" HorizontalAlignment="Left" Margin="435,145,0,0" VerticalAlignment="Top" Width="205" Height="55" FontSize="20" Click="Btn_Conta_Click">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFFFAD36" Offset="0.21"/>
+                        <GradientStop Color="#FF46FF00" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Label x:Name="Lbl_Contatore" Content="" HorizontalAlignment="Left" Margin="435,253,0,0" VerticalAlignment="Top" Width="205" Height="37" FontSize="20"/>
 
         </Grid>
     </Grid>

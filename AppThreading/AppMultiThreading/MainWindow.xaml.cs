@@ -33,11 +33,12 @@ namespace AppMultiThreading
 
         private void DoWork()
         {
-            //azione che crusha tutto perchè richiede parecchi calcoli(se fatto in un unico thread)
+            //azione che blocca tutto perchè richiede parecchi calcoli(se fatto nello stesso thread)
             for (int i = 1; i < 10000; i++)
             {
-                for (int j = 1; j < 1000; j++)
+                for (int j = 1; j < 10000; j++)
                 {
+
                 }
             }
             //un thread non puo scrivere su un altro thread
@@ -49,6 +50,27 @@ namespace AppMultiThreading
         public void AggiornaInterfaccia()
         {
             Lbl_Result.Content = "Finito";
+        }
+
+        private void Btn_Conta_Click(object sender, RoutedEventArgs e)
+        {
+            Task.Factory.StartNew(DoCount);
+        }
+
+        private void DoCount()
+        {
+            for (int i = 1; i < 10000; i++)
+            {
+                for (int j = 1; j < 10000; j++)
+                {
+                    Dispatcher.Invoke(()=>AggiornaInterfaccia(j));
+                }
+            }
+        }
+
+        public void AggiornaInterfaccia(int j)
+        {
+            Lbl_Contatore.Content = j.ToString();
         }
     }
 }
