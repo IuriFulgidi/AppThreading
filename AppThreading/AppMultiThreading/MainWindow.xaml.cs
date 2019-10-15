@@ -28,7 +28,7 @@ namespace AppMultiThreading
         private void Btn_Task_Click(object sender, RoutedEventArgs e)
         {
             //DoWork();
-            
+            Task.Factory.StartNew(DoWork);
         }
 
         private void DoWork()
