@@ -36,11 +36,18 @@ namespace AppMultiThreading
             //azione che crusha tutto perchè richiede parecchi calcoli(se fatto in un unico thread)
             for (int i = 1; i < 10000; i++)
             {
-                for (int j = 1; j < 10000; j++)
+                for (int j = 1; j < 1000; j++)
                 {
-
                 }
             }
+            //un thread non puo scrivere su un altro thread
+            //Lbl_Result.Content = "Finito";
+
+            Dispatcher.Invoke(AggiornaInterfaccia);
+        }
+
+        public void AggiornaInterfaccia()
+        {
             Lbl_Result.Content = "Finito";
         }
     }

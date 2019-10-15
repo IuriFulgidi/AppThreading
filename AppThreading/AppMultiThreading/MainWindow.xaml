@@ -12,8 +12,8 @@
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
         <Grid>
-            <Label x:Name="Lbl_Result" Content="Risultato : " HorizontalAlignment="Left" Margin="75,78,0,0" VerticalAlignment="Top" FontSize="20"/>
-            <Button x:Name="Btn_Task" Content="Task" HorizontalAlignment="Left" Margin="75,265,0,0" VerticalAlignment="Top" Width="205" Height="55" FontSize="20" BorderBrush="#FF646464" Click="Btn_Task_Click">
+            <Label x:Name="Lbl_Result" Content="" HorizontalAlignment="Left" Margin="75,255,0,0" VerticalAlignment="Top" FontSize="20"/>
+            <Button x:Name="Btn_Task" Content="Task" HorizontalAlignment="Left" Margin="75,120,0,0" VerticalAlignment="Top" Width="205" Height="55" FontSize="20" BorderBrush="#FF646464" Click="Btn_Task_Click">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
                         <GradientStop Color="#FF05F3DD" Offset="0"/>
